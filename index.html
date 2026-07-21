@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Budgify</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <h1 class="logo">💰 Budgify</h1>
+    <div class="balance-box">
+      <p>Huidige balans</p>
+      <h2 id="balanceAmount">€ 0,00</h2>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="summary">
+      <div class="card income">
+        <p>Inkomsten</p>
+        <h3 id="totalIncome">€ 0,00</h3>
+      </div>
+      <div class="card expense">
+        <p>Uitgaven</p>
+        <h3 id="totalExpense">€ 0,00</h3>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Nieuwe transactie</h2>
+      <form id="transactionForm">
+        <label>Type
+          <select id="type">
+            <option value="income">Inkomst</option>
+            <option value="expense">Uitgave</option>
+          </select>
+        </label>
+
+        <label>Categorie
+          <input type="text" id="category" required />
+        </label>
+
+        <label>Bedrag (€)
+          <input type="number" id="amount" step="0.01" min="0" required />
+        </label>
+
+        <label>Datum
+          <input type="date" id="date" required />
+        </label>
+
+        <label>Notitie
+          <textarea id="note"></textarea>
+        </label>
+
+        <button class="btn-primary">Toevoegen</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Transacties</h2>
+      <button id="clearAll" class="btn-danger">Alles verwijderen</button>
+      <ul id="transactionsList" class="transactions"></ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Budgify – jouw overzicht</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

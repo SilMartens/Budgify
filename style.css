@@ -1,0 +1,104 @@
+:root {
+  --bg: #0a0f1c;
+  --card: #111827;
+  --accent: #22c55e;
+  --danger: #ef4444;
+  --text: #f9fafb;
+  --muted: #9ca3af;
+  --radius: 12px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui;
+}
+
+header.header {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.6rem;
+}
+
+.balance-box h2 {
+  color: var(--accent);
+}
+
+main {
+  padding-bottom: 2rem;
+}
+
+.panel {
+  background: var(--card);
+  margin: 1rem;
+  padding: 1.4rem;
+  border-radius: var(--radius);
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.card {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: var(--radius);
+  border: 1px solid #1f2937;
+}
+
+.income { border-color: var(--accent); }
+.expense { border-color: var(--danger); }
+
+label {
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: var(--radius);
+  border: 1px solid #1f2937;
+  background: #0a0f1c;
+  color: var(--text);
+}
+
+.btn-primary {
+  background: var(--accent);
+  border: none;
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-danger {
+  background: var(--danger);
+  border: none;
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.transactions {
+  list-style: none;
+  padding: 0;
+}
+
+.transactions li {
+  background: #0a0f1c;
+  padding: 0.8rem;
+  border-radius: var(--radius);
+  border: 1px solid #1f2937;
+  margin-bottom: 0.5rem;
+}
